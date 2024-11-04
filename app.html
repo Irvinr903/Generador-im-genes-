@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Imágenes IA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+     <!-- Botón circular de regresar -->
+     <button id="back-button" onclick="window.location.href='index.html'">🏠</button>
+    <div class="container">
+        <!-- Barra lateral izquierda -->
+        <div class="sidebar">
+            <form id="image-form">
+                <div class="form-top">
+                    <label for="user-prompt">Escribe tu prompt:</label>
+                    <input type="text" id="user-prompt" placeholder="Introduce tu descripción aquí...">
+                    <label for="model-select">Selecciona un modelo:</label>
+                    <select id="model-select">
+                        <option value="FLUX Midjourney">FLUX Midjourney</option>
+                        <option value="FLUX pro 8k">FLUX pro 8k</option>                       
+                        <option value="FLUX comic">FLUX comic</option>
+                        <option value="FLUX anime">FLUX anime</option>                
+                        <option value="FLUX.1 dev">FLUX.1 dev</option>
+                        <option value="FLUX.1 schnell">FLUX.1 schnell</option>           
+                    </select>
+                </div>
+
+                <div class="form-bottom">
+                    <button id="generate" type="submit">Generar Imágenes</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Área de visualización de imágenes -->
+        <div class="image-display">
+            <div id="loading" class="loading">Generando imágenes, por favor...</div>            
+            <div id="image-grid" class="image-grid"></div>
+        </div>
+    </div>
+<!-- Footer con créditos -->
+<footer>
+    <p>© 2024 Arisha AI - Generador de imagen con el modelo  FLUX</p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

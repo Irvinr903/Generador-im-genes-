@@ -1,0 +1,223 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../image/2.png'); /* Cambia esto a la ruta de tu imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija el fondo */
+  color: #1a19198c;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+/* Barra lateral izquierda */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro semitransparente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  position: relative;
+}
+
+/* Labels y campos de texto */
+.sidebar label {
+  color: #ecf0f1;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar textarea, 
+.sidebar select, 
+.sidebar input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  background-color: #2c2c2c;
+  color: #ffffff;
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.sidebar textarea:focus, 
+.sidebar select:focus, 
+.sidebar input:focus {
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.8);
+  outline: none;
+}
+
+/* Estilo moderno para el selector de modelos */
+.bubble-select {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #32aa92;
+  color: rgb(5, 5, 5);
+  border: none;
+  appearance: none; /* Elimina el estilo por defecto del navegador */
+  cursor: pointer;
+}
+
+.bubble-select:hover {
+  background-color: #16a085;
+}
+
+.bubble-select option {
+  color: #333; /* Textos dentro del dropdown */
+}
+
+/* Espacio entre el contenido y el botón */
+.form-bottom {
+  margin-top: auto;
+  padding-top: 30px; /* Ajuste del espaciado */
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* Botón separado en la parte final de la barra */
+.sidebar button {
+  padding: 12px;
+  background-color: #1f1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 16px;
+}
+
+.sidebar button:hover {
+  background-color: #2b2b2b;
+}
+
+/* Área de visualización de imágenes */
+.image-display {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.loading {
+  display: none;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* parte final del generador de imagen ia*/
+
+/* Botón de regresar estilo circular */
+#back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.445); /* Fondo blanco con transparencia */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px; /* Alinea el texto verticalmente */
+  transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+  background-color: #282929;
+}
+
+/* Footer centrado */
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #000000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0; /* Elimina el margen extra */
+}
+
+
+/* Ajusta el contenedor de la imagen a 16:9 */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mantén la cuadrícula */
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.image-grid .image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 177.78%; /* Esto es 9:16 */
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados opcionales */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+}
+
+.image-grid .image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para llenar el espacio sin deformarse */
+}

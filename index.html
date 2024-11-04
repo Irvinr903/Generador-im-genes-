@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="image/logo.png"> <!-- Para PNG -->
+    <title>ARISHA</title>
+    <link rel="stylesheet" href="css/custom.css">
+    
+</head>
+<body>
+    <div class="container">          
+        <!-- Barra de Menú -->
+        <nav class="sidebar">
+            <h2 class="glow-text">ARISHA IA</h2>
+            <ul>
+                <li><a href="index.html">🏠Inicio</a></li>
+                <li><a href="app.html">🤖Generar</a></li>
+                <li><a href="#">🔒Explorar</a></li>
+                <li><a href="about.html">🖥️about</a></li>
+                <li><a href="#">🔒Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- Sección de Galería -->    
+        <section class="gallery">          
+            <!-- Contenedor de ventanas -->
+            <div class="windows-container">
+                <!-- Ventana 1 -->
+                <div class="image-generator-window">
+                    <h2>Generación de Imágenes</h2>
+                    <p class="small-text">Convierte tu ideas en imagenes con FLUX</p>
+                    <a href="app.html" class="generate-button">De texto a imagen</a>
+                </div>
+
+                <!-- Ventana 2 -->
+                <div class="image-generator-window">
+                    <h2>Generación de videos</h2>
+                    <p class="small-text">Muestra tu creatividad con Sora chino </p>
+                    <a href="https://hailuoai.video/" class="generate-button">De texto a videos</a>
+                </div>
+
+                <!-- Ventana 3 -->
+                <div class="image-generator-window">
+                    <h2>Generación de musicas</h2>
+                    <p class="small-text">Crea tu musica con suno</p>
+                    <a href="https://suno.com/" class="generate-button">De texto a musica</a>
+                </div>
+
+                <!-- Ventana 4 -->
+                <div class="image-generator-window">
+                    <h2>foocus colab</h2>
+                    <p class="small-text">Crea tu influencer consistente</p>
+                    <a href="https://colab.research.google.com/github/lllyasviel/Fooocus/blob/main/fooocus_colab.ipynb?pli=1" class="generate-button">google colab</a>
+                </div>
+
+                <!-- Añadir más ventanas si es necesario -->
+            </div>
+            <h2>Explore</h2>
+            <div class="photo-grid">
+                <div class="photo">
+                    <img src="image/foto1.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="In a playful marshmallow costume, a baby walks the runway, the fluffy white outfit bouncing gently with each step. The stage lights add a soft glow, making the scene as sweet as the smiles from the blurred audience.">                 
+                </div>
+                <div class="photo">
+                    <img src="image/foto2.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="AI robot amidst vibrant foliage, gently placing seeds in a rich green forest, sunlight streaming down, soft shadows and reflections, lush vegetation all around, calm and serene atmosphere, ultra-realistic detail.">
+                </div>
+                <div class="photo">
+                    <img src="image/foto3.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="Beautiful woman in a short red dress and a beach background, realistic, hd">
+                </div>
+                <div class="photo">
+                    <img src="image/foto4.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="Lot of plastic dirty and crumpled bottles and other garbage lying horizontally floating above sea level. Against the blue sea, sky and white clouds --no dark, black">
+                </div>
+                <div class="photo">
+                    <img src="image/foto5.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="A majestic tiger, but the body is made of wrinkled and faded paper pieces, origami art, surrealism, installation art, master work, poster, high quality, delicate texture">
+                </div>
+                <div class="photo">
+                    <img src="image/foto6.jpg" alt="Imagen 1" class="image" onclick="openModal(this)" data-description="comic pokemon">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content-wrapper">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-image" id="modalImage" src="">
+      
+      <!-- Texto y botones a la derecha -->
+      <div class="modal-text">
+        <div class="modal-description" id="modalDescription">
+          <!-- El texto de la descripción se actualizará dinámicamente aquí -->
+        </div>
+  
+        <div class="modal-footer">
+          <button class="modal-button" onclick="descargarImagen()">Descargar imagen</button>
+          <button class="modal-button" onclick="copiarPrompt()">Copy prompt</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer con créditos -->
+<footer>
+    <p>© 2024 Arisha AI - Generador de imagen con el modelo  FLUX</p>
+</footer>
+<script src="js/custom.js"></script>
+</body>
+</html>
